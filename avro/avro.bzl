@@ -141,7 +141,8 @@ def avro_java_library(
         name=name,
         srcs=[name + '_srcjar'],
         deps = [
-          Label("//external:io_bazel_rules_avro/dependency/avro")
+            Label("//external:io_bazel_rules_avro/dependency/avro"),
+            "@joda_time_joda_time//jar",
         ],
         visibility=visibility,
     )
