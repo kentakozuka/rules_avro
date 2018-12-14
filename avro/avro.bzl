@@ -31,6 +31,13 @@ def avro_repositories():
       name = 'io_bazel_rules_avro/dependency/avro',
       actual = '@org_apache_avro_avro//jar',
   )
+  # added
+  native.maven_jar(
+      name = "joda_time_joda_time",
+      artifact = "joda-time:joda-time:2.4",
+      repository = "https://repo.maven.apache.org/maven2/",
+      sha1 = "89e9725439adffbbd41c5f5c215c136082b34a7f",
+  )
 
 
 def _new_generator_command(ctx, src_dir, gen_dir):
